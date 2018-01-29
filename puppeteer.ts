@@ -3,7 +3,7 @@ import { timeout, TimeoutError } from 'promise-timeout';
 const puppeteer = require('puppeteer');
 const devices = require('puppeteer/DeviceDescriptors');
 
-export class RAPuppeteerChrome {
+export class PuppeteerChrome {
     public browser : Promise;
     public page : EventEmitter;
 

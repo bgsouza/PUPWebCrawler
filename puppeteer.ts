@@ -20,13 +20,20 @@ export class PuppeteerChrome {
         });   
     }
 
-    async navigateTo(url) {
+    async navigateTo(url, page?: any) {
         if (!url)
           throw new Error('Missing URL');
-          return await this.page.goto(url, {
-            waitUntil: 'networkidle',
-            timeout: 180000
-        });
+          if(page == null) {
+            return await this.page.goto(url, {
+                waitUntil: 'networkidle2',
+                timeout: 180000
+            });
+        } else {
+            return await page.goto(url, {
+                waitUntil: 'networkidle2',
+                timeout: 180000
+            });
+        }
     }
 
     async takeScreenshot() {  
@@ -37,7 +44,6 @@ export class PuppeteerChrome {
             //logger.verbose(err);
             console.log(`[takeScreenshot][ERROR]: ${err}`)
             image = null;
-            throw new Error(err);
         });
         return image;
     }
@@ -62,8 +68,11 @@ export class PuppeteerChrome {
         } catch (err) {
           //console.error(err);
           throw new Error(err);
-          //return {};
         }
+    }
+
+    async reload() {
+        await this.page.reload().then(() => this.waitPageLoad(), (err) => { console.log(`Error when trying to navigate: ${err}`) });
     }
 
     async waitPageLoad() {
@@ -83,12 +92,12 @@ export class PuppeteerChrome {
         await timeout(()=>{return true;}, 3000);
     }
 
-    async openInNewTab(url: string) {
-        this.page = await this.browser.newPage()
+    async openInNewTab() {
+        return await this.browser.newPage()
     }
     
-    async closeNewTab(page: EventEmitter) {
-       await this.page.close();
+    async closeNewTab(page: any) {
+       await page.close();
     }
 
     async setCookie(cookie) {
@@ -113,9 +122,7 @@ export class PuppeteerChrome {
     async includeJQuery() {
         const jqueryscript = 
           `var s=window.document.createElement('script'); s.src='https://code.jquery.com/jquery-3.2.1.min.js'; window.document.head.appendChild(s);`;
-        console.log('Injetando JQuery');
         await this.executeScript(jqueryscript);
-        console.log('JQuery injetou');
       }
     
     async hasJQuery() {
@@ -124,7 +131,6 @@ export class PuppeteerChrome {
         let script = `document.querySelector('script[src="https://code.jquery.com/jquery-3.2.1.min.js"]') != null;`;
         
         do {
-          console.log('Testando se tem JQuery');
           let readyState = await this.executeScript(script);
           jqueryReady = readyState == true;
           hit++;
@@ -136,7 +142,6 @@ export class PuppeteerChrome {
         await this.waitFor(2000);
         await this.executeScript('$=jQuery');
         return jqueryReady;
-        //await this.driver.executeScript(`$ = typeof $ == undefined ? jQuery : $`);
     }
 
     async IncludeAndAwaitJquery(timeout?: number) {

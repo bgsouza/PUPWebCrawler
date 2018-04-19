@@ -1,2 +1,2 @@
 # Sample-Puppteer
-WebCrawler based in ChromePuppter
+Simple implementation using Async / Await for WebCrawlers based on ChromePuppteer

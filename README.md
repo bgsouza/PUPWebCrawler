@@ -1,2 +1,6 @@
-# Simple-Puppteer
-Simple implementation using Async / Await for WebCrawlers based on ChromePuppteer
+### Para instalar o projeto:
+-  na raiz executar: npm install
+-  executar: npm i -g pm2
+
+###Executar o projeto:
+- npm start

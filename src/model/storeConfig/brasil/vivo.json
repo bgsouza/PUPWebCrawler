@@ -1,0 +1,10 @@
+{
+    "ScriptDefinitions": {
+        "pre": null,
+        "pos": null
+    },
+    "ScriptProdutsBrowser": "var RAproducts=[];$('#catalog-panel [product_category=\"Vitrine_Smartphone\"]').each(function(){RAproducts.push({nome:$(this).find('.product-desc h2').attr('title'),url:`http://${window.location.hostname}`+$(this).find('a:first-child').attr('href'),disponivel:$(this).find('.card-product-info-unavailable').length == 0,categoria:$('a span.icon-Home_setas').parent().next().text(),precoRegular:$(this).find('h3 strong').text().replace(/por|\\s|r\\$/gmi,'').trim(),precoEspecial:0,precoDe:$(this).find('h3 span').text().replace(/por|\\s|r\\$/gmi,'').trim(),marca:$(this).find('a:first-child').attr('href').replace('/vivostorefront/Vivo/Aparelhos/Smartphone/','').split('-')[0],os:null})}),RAproducts;",
+    "ScriptProductIntenalDetail": "var RAproductDetails={os:(()=>{for(var a in specs=document.querySelectorAll(\".tech-spec p\"),resp=\"\",specs)if(undefined!=specs[a].innerText&&-1!=specs[a].innerText.indexOf(\"Operacional\")){resp=specs[a].innerText.replace(/Sistema Operacional|-|:/gmi,'').trim();break}return resp})()};RAproductDetails;",
+    "ScriptNextPageBrowser": "$('.pagination .pager-next-link')[0].click()",
+    "PaginatorIsAjax": false
+}

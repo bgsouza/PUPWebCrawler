@@ -1,0 +1,10 @@
+{
+    "ScriptDefinitions": {
+        "pre": null,
+        "pos": null
+    },
+    "ScriptProdutsBrowser": "var RAproducts=[];$('.prod_list').each(function(){let c=$(this).data('product');RAproducts.push({nome:c.name,url:`http://${window.location.hostname}${$(this).find('.grid-product-name a').attr('href')}`,disponivel:true,categoria:c.category,precoRegular:c.price,precoEspecial:0<$(this).find('.precio-tachado').length,precoDe:$(this).find('.precio-tachado .quantity').text().trim(),marca:c.brand,os:null})}),RAproducts;",
+    "ScriptProductIntenalDetail": "var RAproductDetails={os:(()=>{for(var b in specs=document.querySelectorAll('.product-detail__extended-info__list-item'),resp=\"\",specs)if(void 0!=specs[b].innerText&&-1!=specs[b].innerText.indexOf('operativo')){resp=specs[b].innerText.replace(/Sistema operativo|-|:/gmi,\"\").trim();break}return resp})()};",
+    "ScriptNextPageBrowser": "$('html,body').animate({scrollTop: $('#footer').offset().top-200},'slow');",
+    "PaginatorIsAjax": true
+}

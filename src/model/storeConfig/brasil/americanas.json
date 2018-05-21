@@ -1,0 +1,10 @@
+{
+    "ScriptDefinitions": {
+        "pre": null,
+        "pos": null
+    },
+    "ScriptProdutsBrowser": "var RAproducts=[];$('.product-grid-item').each(function(){RAproducts.push({nome:$(this).find('.card-product-name').text(),url:`http://${window.location.hostname}${$(this).find('.card-product-url').attr('href')}`,disponivel:$(this).find('.avise-me').length == 0,categoria:$('.breadcrumb-title:eq(0)').text(),precoRegular:$(this).find('.card-product-price .value').text().replace(/r\\$/i,''),precoEspecial:0<$(this).find('.card-product-price-from-value').length,precoDe:0<$(this).find('.card-product-price-from-value').length?$(this).find('.card-product-price-from-value').text().replace(/r\\$/i,''):0})}),RAproducts;",
+    "ScriptProductIntenalDetail": "var RAproductDetails={os:(()=>{for(var a in specs=document.querySelectorAll(\".tech-spec p\"),resp=\"\",specs)if(undefined!=specs[a].innerText&&-1!=specs[a].innerText.indexOf(\"Operacional\")){resp=specs[a].innerText.replace(/Sistema Operacional|-|:/gmi,'').trim();break}return resp})()};RAproductDetails;",
+    "ScriptNextPageBrowser": "$(\".card.card-pagination a\")[0].click()",
+    "PaginatorIsAjax": false
+}

@@ -1,0 +1,21 @@
+{
+   "HISTORICAL": [
+        {
+            "from": "BRL",
+            "to": "USD"
+        },
+        {
+            "from": "MXN",
+            "to": "USD"
+        },
+        {
+            "from": "ClP",
+            "to": "USD"
+        },
+        {
+            "from": "COP",
+            "to": "USD"
+        }          
+    ],
+    "LIVE" : ["USD","BRL","MXN","CLP","COP"]
+}

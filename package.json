@@ -1,41 +1,41 @@
 {
-    name: "simple-puppteer",
-    version: "1.0.0",
-    main: "app.js",
-    scripts: {
-    serve: "sudo npm run clean && sudo npm run lint & sudo npm run build && pm2 start app.js --name simple-puppteer",
-    prestart: "npm run clean && npm run lint & npm run build",
-    start: "node app.js",
-    build: "tsc -p .",
-    lint: "tslint './scr/**/*.ts'",
-    clean: "gulp clean",
-    rebuild: "npm run clean && npm run build"
-    },
-    author: "Bruno Souza <bruno@bgsouza.com>",
-    license: "ISC",
-    dependencies: {
-    bluebird: "^3.5.0",
-    chromedriver: "^2.30.1",
-    dotenv: "^4.0.0",
-    form-data: "^2.3.1",
-    puppeteer: "^1.0.0",
-    querystringify: "^1.0.0",
-    request: "^2.81.0",
-    requirejs-plugins: "^1.0.2"
-    },
-    devDependencies: {
-    @types/reflect-metadata: "0.0.5",
-    @types/request: "^2.0.0",
-    @types/selenium-webdriver: "^3.0.8",
-    aws-sdk: "^2.125.0",
-    del: "^3.0.0",
-    gulp: "^3.9.1",
-    gulp-shell: "^0.6.3",
-    promise-timeout: "^1.1.1",
-    puppeteer: "^1.0.0",
-    reflect-metadata: "^0.1.10",
-    selenium-webdriver: "^4.0.0-alpha.1",
-    tslint: "^5.5.0",
-    typescript: "^2.4.2"
-    }
+  "name": "Retail-Analytics-Crawler",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "serve": "sudo npm run clean && sudo npm run lint & sudo npm run build && pm2 start app.js --name ra-monitor-browser",
+    "prestart": "npm run clean && npm run lint & npm run build",
+    "start": "node app.js",
+    "build": "tsc -p .",
+    "lint": "tslint './scr/**/*.ts'",
+    "clean": "gulp clean",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "author": "Bruno Souza <bruno@bgsouza.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "chromedriver": "^2.30.1",
+    "dotenv": "^4.0.0",
+    "form-data": "^2.3.1",
+    "puppeteer": "^1.0.0",
+    "querystringify": "^1.0.0",
+    "request": "^2.81.0",
+    "requirejs-plugins": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/reflect-metadata": "0.0.5",
+    "@types/request": "^2.0.0",
+    "@types/selenium-webdriver": "^3.0.8",
+    "aws-sdk": "^2.125.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.3",
+    "promise-timeout": "^1.1.1",
+    "puppeteer": "^1.0.0",
+    "reflect-metadata": "^0.1.10",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "tslint": "^5.5.0",
+    "typescript": "^2.4.2"
+  }
 }

@@ -1,0 +1,10 @@
+{
+    "ScriptDefinitions": {
+        "pre": null,
+        "pos": null
+    },
+    "ScriptProdutsBrowser": "var RAproducts=[];$(\".equipos-listado .item\").each(function(){RAproducts.push({nome:$(this).find(\".product-name a\").text(),url:$(this).find(\".product-name a\").attr(\"href\"),disponivel:true,categoria:$(\".category-title h1\").text(),precoRegular:$(this).find(\".regular-price .price\").text().replace(/\\$|\\s/,'').trim(),precoEspecial:$(this).find(\".special-price .price\").text().replace(/\\$|\\s/,'').trim(),precoDe:$(this).find(\".old-price .price\").text().trim(),marca:null,os:null})});RAproducts;",
+    "ScriptNextPageBrowser": ";(()=>{document.querySelector('.pages .next.i-next').click()})();",
+    "ScriptProductIntenalDetail": "var RAproductDetail={os:document.querySelector('#product-attribute-specs-table tr:nth-child(2) td.data').innerText,marca:document.querySelector('#product-attribute-specs-table tr:nth-child(1) td.data').innerText};RAproductDetail;",
+    "PaginatorIsAjax": false
+}

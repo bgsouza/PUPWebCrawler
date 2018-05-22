@@ -22,10 +22,10 @@ export class RAMonitor {
   public async init() {
     let task = null;
 
-    task = 'https://www.att.com.mx/tienda/motorola.html?limit=15;att;mexico;2017-01-07 18:00:00';
+    //task = 'https://www.att.com.mx/tienda/motorola.html?limit=15;att;mexico;2017-01-07 18:00:00';
     //task = 'https://lojaonline.vivo.com.br/vivostorefront/Vivo/Aparelhos/Smartphone/c/SMARTPHONE;vivo;brasil;2017-01-07 18:00:00';
     //task = 'https://lojaonline.claro.com.br/celular;claro;brasil;2017-01-07 18:00:00';
-    //task   = 'https://www.americanas.com.br/categoria/434997;americanas;brasil;2017-01-07 18:00:00';
+    task   = 'https://www.americanas.com.br/categoria/434997;americanas;brasil;2017-01-07 18:00:00';
     //task   = 'https://lojaonline.tim.com.br/celulares;tim;brasil;2017-01-07 18:00:00';
     
     // do {

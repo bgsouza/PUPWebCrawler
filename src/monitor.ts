@@ -54,7 +54,7 @@ export class MonitorCategoria extends RAMonitor {
     let coin = await this.loadCoinByTask(taskData); 
 
     let response = await this.collectInfos(scripts, coin);
-    this.MonitorCategoriaService.save(response);
+    //this.MonitorCategoriaService.save(response);
     console.log('#### Final ####');
     console.log(response);
 

@@ -1,8 +1,8 @@
 import { post } from 'request';
 import { RAMonitor } from './lib/ra-monitor';
-import { MonitorCategoriaTask } from './model/monitor-categoria-task';
+import { MonitorCategoriaTask } from './model/monitor-task';
 import { Product } from './model/product';
-import { MonitorCategoriaService } from './monitor-categoria-service';
+import { MonitorCategoriaService } from './monitor-service';
 import { RAPuppeteerChrome } from './lib/ra-puppeteer'
 import { RAMoney } from './lib/ra-money';
 import { CoinsTypes } from './lib/model/coin-types';

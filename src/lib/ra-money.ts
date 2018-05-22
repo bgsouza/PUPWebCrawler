@@ -16,8 +16,8 @@ export class RAMoney {
     constructor() {
         this.apiUri = process.env.CURRENCYLAYER_API;
         this.apiToken = process.env.CURRENCYLAYER_TOKEN;
-        this.parsersFile = `${__dirname}/../../src/model/money/parsers.json`;
-        this.coinsParsedFile = `${__dirname}/../../src/model/money/coin.json`;
+        this.parsersFile = `${process.cwd()}/src/model/money/parsers.json`;
+        this.coinsParsedFile = `${process.cwd()}/src/model/money/coin.json`;
         this.type = CurrencyLayerType[process.env.CURRENCYLAYER_TYPE];
     }
 

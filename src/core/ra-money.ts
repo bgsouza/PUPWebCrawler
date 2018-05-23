@@ -1,5 +1,5 @@
 import { post, get, RequestResponse, CoreOptions } from "request";
-import { CurrencyLayerType } from './../lib/model/types-currencylayer';
+import { CurrencyLayerType } from './../core/model/types-currencylayer';
 import { inspect } from 'util';
 import * as fs from 'fs';
 
@@ -16,8 +16,8 @@ export class RAMoney {
     constructor() {
         this.apiUri = process.env.CURRENCYLAYER_API;
         this.apiToken = process.env.CURRENCYLAYER_TOKEN;
-        this.parsersFile = `${process.cwd()}/src/model/money/parsers.json`;
-        this.coinsParsedFile = `${process.cwd()}/src/model/money/coin.json`;
+        this.parsersFile = `${process.cwd()}/store/money/parsers.json`;
+        this.coinsParsedFile = `${process.cwd()}/store/money/coin.json`;
         this.type = CurrencyLayerType[process.env.CURRENCYLAYER_TYPE];
     }
 

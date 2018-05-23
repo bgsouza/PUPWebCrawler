@@ -1,6 +1,6 @@
 import { post } from 'request';
-import { RADomainApiClient } from './lib/clients/ra-domain-api-client';
-import { Product } from './model/product';
+import { RADomainApiClient } from './core/clients/ra-domain-api-client';
+import { Product } from './core/model/product';
 
 export class MonitorCategoriaService {
     private RADomainApiClient: RADomainApiClient;

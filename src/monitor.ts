@@ -1,11 +1,11 @@
 import { post } from 'request';
-import { RAMonitor } from './lib/ra-monitor';
-import { MonitorCategoriaTask } from './model/monitor-task';
-import { Product } from './model/product';
+import { RAMonitor } from './core/ra-monitor';
+import { MonitorCategoriaTask } from './core/model/monitor-task';
+import { Product } from './core/model/product';
 import { MonitorCategoriaService } from './monitor-service';
-import { RAPuppeteerChrome } from './lib/ra-puppeteer'
-import { RAMoney } from './lib/ra-money';
-import { CoinsTypes } from './lib/model/coin-types';
+import { RAPuppeteerChrome } from './core/ra-puppeteer'
+import { RAMoney } from './core/ra-money';
+import { CoinsTypes } from './core/model/coin-types';
 import * as fs from 'fs';
 
 export class MonitorCategoria extends RAMonitor {
@@ -181,7 +181,7 @@ export class MonitorCategoria extends RAMonitor {
               product.subbrand = details.submarca || product.price;
               product.os = details.os || product.os;
               product.status = details.disponivel || product.status;
-
+              
               //close tab
               //this.chrome.closeNewTab(tabs[3]);      
 
@@ -226,7 +226,7 @@ export class MonitorCategoria extends RAMonitor {
 
  /* Bussiness */
  private async loadSettingsByRetailer(taskData) {
-  return JSON.parse(fs.readFileSync(`${__dirname}/../src/model/storeConfig/${taskData.country}/${taskData.retailerName}.json`, 'utf8'));
+   return JSON.parse(fs.readFileSync(`${process.cwd()}/store/storeConfig/${taskData.country}/${taskData.retailerName}.json`, 'utf8'));
  }
 
  private async loadCoinByTask(taskData) {

@@ -226,7 +226,7 @@ export class MonitorCategoria extends RAMonitor {
 
  /* Bussiness */
  private async loadSettingsByRetailer(taskData) {
-   return JSON.parse(fs.readFileSync(`${process.cwd()}/store/storeConfig/${taskData.country}/${taskData.retailerName}.json`, 'utf8'));
+   return JSON.parse(fs.readFileSync(`${process.cwd()}/store/config/${taskData.country}/${taskData.retailerName}.json`, 'utf8'));
  }
 
  private async loadCoinByTask(taskData) {

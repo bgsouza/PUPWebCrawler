@@ -11,7 +11,7 @@ export class RAPuppeteerChrome {
     }
 
     async initializeBrowser() {
-        this.browser = await puppeteer.launch({ headless: true, ignoreHTTPSErrors: true, args: ['--no-sandbox', '--disable-setuid-sandbox']});
+        this.browser = await puppeteer.launch({ headless: false, ignoreHTTPSErrors: true, args: ['--no-sandbox', '--disable-setuid-sandbox']});
         this.page = await this.browser.newPage();
         this.page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.84 Safari/537.36')
         this.page.setViewport({

@@ -9,11 +9,14 @@ Engine para fazer captura de dados em sistes simple ou com navegação dinâmica
   - PM2
   
 ## Para instalar o projeto:
--  na raiz executar: npm install
--  executar: npm i -g pm2
+-  na raiz executar: $ npm i
+-  instalar o PM2: $ npm i -g pm2
 
 ## Executar o projeto:
-- npm start
+- rodar manualmente:
+  - no diretório do projeto: $ npm start
+- PM2:
+  - no diretório do projeto: $ pm2 start app.js
 
 ## TODO
  - Testes
